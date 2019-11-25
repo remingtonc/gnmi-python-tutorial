@@ -1,0 +1,9 @@
+cffi==1.13.2
+cisco-gnmi==1.0.3
+cryptography==2.8
+grpcio==1.25.0
+lxml==4.4.1
+protobuf==3.10.0
+pyang==2.1
+pycparser==2.19
+six==1.13.0

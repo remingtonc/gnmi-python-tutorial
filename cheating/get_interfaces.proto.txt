@@ -1,0 +1,10 @@
+path: <
+    elem: <
+        name: "interfaces"
+    >
+    elem: <
+        name: "interface"
+    >
+>
+type: STATE
+encoding: JSON_IETF

@@ -1,0 +1,16 @@
+subscribe: <
+    subscription: <
+        path: <
+            elem: <
+                name: "interfaces"
+            >
+            elem: <
+                name: "interface"
+            >
+        >
+        mode: SAMPLE
+        sample_interval: 5000000000
+    >
+    mode: STREAM
+    encoding: PROTO
+>

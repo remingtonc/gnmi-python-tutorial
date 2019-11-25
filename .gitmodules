@@ -1,0 +1,6 @@
+[submodule "openconfig-models"]
+	path = openconfig-models
+	url = https://github.com/openconfig/public
+[submodule "industry-models"]
+	path = industry-models
+	url = https://github.com/YangModels/yang
