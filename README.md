@@ -29,3 +29,32 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> from cisco_gnmi import ClientBuilder
 >>>
 ```
+
+### Loading Message from File
+We can use the textual format for protobufs which is easy to write and directly load them in as messages to use with the client.
+
+```bash
+(gnmi-python-tutorial) [gnmi-python-tutorial] python
+Python 3.7.5 (default, Nov  1 2019, 02:16:32)
+[Clang 11.0.0 (clang-1100.0.33.8)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from google.protobuf import text_format
+>>> from cisco_gnmi import proto
+>>> get_msg = proto.gnmi_pb2.GetRequest()
+>>> proto_filename = 'cheating/get_interfaces.proto.txt'
+>>> with open(proto_filename, 'r') as proto_fd:
+...   proto_text = proto_fd.read()
+...
+>>> text_format.Merge(proto_text, get_msg)
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+  }
+}
+type: STATE
+encoding: JSON_IETF
+>>> 
+```
